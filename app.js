@@ -9,5 +9,7 @@ app.use(bodyParser.json());
 
 app.use(validateRoute);
 
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 3000;
 
-app.listen(3000);
+app.listen(port);
